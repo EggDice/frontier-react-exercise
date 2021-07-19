@@ -1,7 +1,6 @@
 import { Observable } from 'rxjs';
 import { configureStore, createSlice } from '@reduxjs/toolkit';
 import type { SliceCaseReducers} from '@reduxjs/toolkit';
-import { createStore } from 'redux';
 
 export interface CoreStore<ALL_STATE, ALL_EVENT> {
   state$: Observable<ALL_STATE>;

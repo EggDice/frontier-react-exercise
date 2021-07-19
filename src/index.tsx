@@ -1,10 +1,13 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
+import { createApp, createStore } from './app/';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const renderer = (element: JSX.Element) => {
+  ReactDOM.render(
+    element,
+    document.getElementById('root'),
+  );
+};
+const store = createStore();
+const app = createApp({ renderer, store });
+app.render();
+app.start();
